@@ -1,0 +1,6 @@
+ image_raw_data = tf.gfile.GFile(image_list[i],'r').read() 
+        img_data = tf.image.decode_jpeg(image_raw_data)  
+        
+        #第一個引數為原始影象，第二個引數為影象大小，第三個引數給出了指定的演算法  
+        resized = tf.image.resize_images(img_data, [64,64],method=0)  
+        resized = np.asarray(resized.eval(),dtype='uint8')

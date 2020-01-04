@@ -1,0 +1,7 @@
+    temp = np.array([class_train,label_train])  # 2*140
+    temp = temp.transpose()  # 140*2
+    #打亂順序
+    np.random.shuffle(temp)
+    #第一列是image，第二列是label
+    image_list = list(temp[:,0])
+    label_list = list(temp[:,1])
